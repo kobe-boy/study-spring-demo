@@ -9,7 +9,7 @@ public class HelloTest {
 	public static void main(String[] args) {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:beans-hello.xml");
 		Hello bean = ac.getBean(Hello.class);
-		String say = bean.say("ÎÒ°®Äã×æ¹ú");
+		String say = bean.say("æäº‹æƒ…");
 		System.out.println(say);
 	}
 }
