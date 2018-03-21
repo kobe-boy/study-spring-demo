@@ -10,7 +10,7 @@ public class Hello {
 	
 	public Hello() {
 		super();
-		System.out.println("Hello³õÊ¼»¯");
+		System.out.println("Hello init");
 	}
 
 	public Hello(String name, int age) {
@@ -32,7 +32,7 @@ public class Hello {
 		this.age = age;
 	}
 	public String say(String song){
-		return "³ª£º¡¶"+song+"¡·¸è";
+		return "say :"+song+" !!!";
 	}
 	
 	
