@@ -1,7 +1,9 @@
 package com.hello;
 
+import org.omg.CORBA.Request;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequestMapping("/hello")
@@ -9,11 +11,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 
 	/**
-	 * ∑√Œ http://localhost:8080/SpringMVCStudy/hello/hi∑µªÿΩ·π˚hello success
+	 * ËØ∑Ê±Çhttp://localhost:8080/SpringMVCStudy/hello/hiËøîÂõûhello success
+	 * Â∏∏Áî®:‰ΩøÁî®method÷∏ËØ∑Ê±ÇÊñπÂºè
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping("/hi")
+	@RequestMapping(value="/hi",method=RequestMethod.GET)
 	public String say(){
 		System.out.println("hello world");
 		return "hello success";
