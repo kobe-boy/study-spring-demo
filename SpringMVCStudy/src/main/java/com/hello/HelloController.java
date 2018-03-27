@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequestMapping("/hello")
@@ -34,5 +35,19 @@ public class HelloController {
 		System.out.println("restSay:"+id);
 		return id+"";
 	}
+	
+	/**
+	 * @RequestParam 映射请求参数:
+	 * 	required参数是否必须，默认true
+	 * 	defaultValue 设置默认值
+	 * http://localhost:8080/SpringMVCStudy/hello/requestParam?id=1234
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/requestParam")
+	public String testRequestParam(@RequestParam(value="id",required=false,defaultValue="0") Integer id){
+		System.out.println("requestParam:"+id);
+		return id+"";
+	} 
 	
 }
