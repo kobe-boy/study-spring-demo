@@ -52,4 +52,41 @@ public class HelloController {
 		return id+"";
 	} 
 	
+	/**
+	 * 映射请求头信息@RequestHeader
+	 * @param al
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/requestHeader")
+	public String testRequestHeader(@RequestHeader("Accept-Language") String al){
+		System.out.println("请求头，Accept-Language："+al);
+		return "Accept-Language:"+al;
+	}
+	
+	/**
+	 * 映射一个cookie值@CookieValue
+	 * @param sessionId
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/cookie")
+	public String testCookie(@CookieValue("JSESSIONID") String sessionId){
+		System.out.println("test sessionId："+sessionId);
+		return "sessionId:"+sessionId;
+	}
+	
+	/**
+	 * 测试接收对象类型参数
+	 * 当前不能返回json对象，缺少json的jar包
+	 * @param user
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value="/user")
+	public String testPojo(User user){
+		System.out.println("test user："+user);
+		return user.toString();
+	}
+	
 }
