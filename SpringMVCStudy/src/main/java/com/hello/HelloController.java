@@ -1,6 +1,9 @@
 package com.hello;
 
-import org.omg.CORBA.Request;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 @RequestMapping("/hello")
 @Controller
@@ -87,6 +91,32 @@ public class HelloController {
 	public String testPojo(User user){
 		System.out.println("test user："+user);
 		return user.toString();
+	}
+	
+	/**
+	 * 目标方法返回值可以是ModelAndView类型
+	 * 其中可以包含视图和模型信息
+	 * SpringMVC会把ModelAndView中model数据放到request域对象中
+	 * @return
+	 */
+	@RequestMapping(value="/mv")
+	public ModelAndView testModelAnd(){
+		ModelAndView mv = new ModelAndView("success");
+		mv.addObject("time", new Date());
+		System.out.println("mv...");
+		return mv;
+	}
+	
+	/**
+	 * 目标方法可以添加Map类型(实际上也可以是Model类型或ModelMap类型)的参数
+	 * @param map
+	 * @return
+	 */
+	@RequestMapping(value="/map")
+	public String testMap(Map<String, Object> map){
+		map.put("names", Arrays.asList("Tom","kitt","Marry","Hillon"));
+		System.out.println("map..."+map.getClass().getName());
+		return "success";
 	}
 	
 }
