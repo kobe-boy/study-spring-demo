@@ -8,6 +8,16 @@
 </head>
 <body>
 
+	<form action="hello/user" method="post">
+		username:<input type="text" name="username" ><br>
+		password:<input type="text" name="password"><br>
+		email:<input type="text" name="email"><br>
+		age:<input type="text" name="age"><br>
+		<input type="submit" value="Submit">
+	</form>
+<br><br>
+<h3>rest 风格</h3>
+<br><br>
 	<form action="rest/testRest/1" method="post">
 		<input type="hidden" name="_method" value="PUT">
 		<input type="submit" value="PUT Test">
