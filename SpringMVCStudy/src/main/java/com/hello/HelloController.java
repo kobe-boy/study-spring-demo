@@ -83,7 +83,8 @@ public class HelloController {
 	/**
 	 * 测试接收对象类型参数，并返回json
 	 * 实现步骤：
-	 * 
+	 *  1.加入jackson的jar包
+	 *  2.@ResponseBody
 	 * @param user
 	 * @return
 	 */
