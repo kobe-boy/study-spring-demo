@@ -13,8 +13,10 @@
   * 接收对象类型参数，返回json数据
   * 返回ModelAndView类型
   * 参数中添加Map类型
-* com.rest 是springmvc的rest风格API例子
-* com.data 是springmvc的数据格式化例子
+* com.rest 是springmvc的rest风格API demo
+* com.data 是springmvc的数据格式化demo
+* com.upload 是springmvc的上传小demo
+* com.interceptors 是springmvc的拦截器demo
 
 
 
