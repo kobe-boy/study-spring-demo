@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
  * 1.加入fileupload的jar包
  * 2.需要在上下文中配置MultipartResolver
  * 3.参数接收MultipartFile
- * @author 12862
+ * @author 
  *
  */
 @RequestMapping("/file")
