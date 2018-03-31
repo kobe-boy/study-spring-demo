@@ -7,7 +7,18 @@
 <title>首页</title>
 </head>
 <body>
-
+<h3>数据格式化 测试</h3>
+<h4>测试日期类型,货币类型是否能正确转换</h4>
+   <form action="data/get" method="post">
+		username:<input type="text" name="username" ><br>
+		birthday:<input type="text" name="birthday">格式yyyy-MM-dd<br>
+		salary:<input type="text" name="salary">格式#,###,###.#s<br>
+		<input type="submit" value="Submit">
+	</form>
+<h3>=====================================</h3>
+<h3>测试接收对象类型参数</h3>
+<h4>并返回json数据</h4>
+<br><br>
 	<form action="hello/user" method="post">
 		username:<input type="text" name="username" ><br>
 		password:<input type="text" name="password"><br>
@@ -16,6 +27,7 @@
 		<input type="submit" value="Submit">
 	</form>
 <br><br>
+<h3>=====================================</h3>
 <h3>rest 风格</h3>
 <br><br>
 	<form action="rest/testRest/1" method="post">
