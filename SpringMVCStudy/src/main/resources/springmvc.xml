@@ -26,4 +26,14 @@
         <property name="maxInMemorySize" value="40960"></property>  
 		<property name="uploadTempDir" value="fileUpload"></property>
 	</bean>
+	
+	<!-- 配置自定义的拦截器 -->
+	<mvc:interceptors>
+		<bean class="com.interceptors.FirstInterceptor"></bean>
+		<!-- 可以配置拦截器作用的路径 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/rest/testRest"/>
+			<bean class="com.interceptors.SecondInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>
