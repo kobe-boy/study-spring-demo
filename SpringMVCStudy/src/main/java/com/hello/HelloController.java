@@ -81,16 +81,17 @@ public class HelloController {
 	}
 	
 	/**
-	 * 测试接收对象类型参数
-	 * 当前不能返回json对象，缺少json的jar包
+	 * 测试接收对象类型参数，并返回json
+	 * 实现步骤：
+	 * 
 	 * @param user
 	 * @return
 	 */
 	@ResponseBody
 	@RequestMapping(value="/user")
-	public String testPojo(User user){
+	public User testPojo(User user){
 		System.out.println("test user："+user);
-		return user.toString();
+		return user;
 	}
 	
 	/**
