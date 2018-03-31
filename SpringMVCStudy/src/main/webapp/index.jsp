@@ -7,6 +7,14 @@
 <title>首页</title>
 </head>
 <body>
+<h3>文件上传...测试</h3>
+<form action="file/upload" method="post" enctype="multipart/form-data">
+		desc:<input type="text" name="desc" ><br>
+		file:<input type="file" name="file"><br>
+		<input type="submit" value="Submit">
+</form>
+<h3>=====================================</h3>
+<br>
 <h3>数据格式化 测试</h3>
 <h4>测试日期类型,货币类型是否能正确转换</h4>
    <form action="data/get" method="post">
